@@ -1,2 +1,3 @@
-# c-plus-plus-understanding-cuda
-Understanding CUDA with C++
+# C++: Understanding CUDA
+
+Some setup and examples for understand CUDA with C++
