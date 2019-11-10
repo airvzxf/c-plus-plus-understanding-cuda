@@ -1,0 +1,7 @@
+#ifndef CUDA_TEST_CLION_VECTOR_ADD_CUH
+#define CUDA_TEST_CLION_VECTOR_ADD_CUH
+
+int vectorAdd();
+
+
+#endif //CUDA_TEST_CLION_VECTOR_ADD_CUH

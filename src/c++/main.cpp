@@ -1,8 +1,8 @@
 #include <cstdio>
-#include "cuda.cuh"
+#include "vectorAdd.cuh"
 
 int main() {
     printf("Hello, World! From C++.\n\n");
-    cuda();
+    vectorAdd();
     return 0;
 }

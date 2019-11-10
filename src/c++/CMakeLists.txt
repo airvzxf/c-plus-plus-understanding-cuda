@@ -6,7 +6,7 @@ enable_language(CUDA)
 find_package(CUDA REQUIRED)
 include(FindCUDA)
 
-#include_directories(/opt/cuda/include ${MPI_INCLUDE_PATH})
+#include_directories(/opt/vectorAdd/include ${MPI_INCLUDE_PATH})
 
 set(CMAKE_CXX_STANDARD 17)
 file(GLOB SOURCES *.cu *.cpp *.cuh)
@@ -19,4 +19,4 @@ list(APPEND CUDA_NVCC_FLAGS -gencode arch=compute_20,code=sm_20)
 list(APPEND CUDA_NVCC_FLAGS -gencode arch=compute_30,code=sm_30)
 list(APPEND CUDA_NVCC_FLAGS -gencode arch=compute_35,code=sm_35)
 
-#target_link_libraries(CUDA_Test_Clion /opt/cuda/lib/libcudart.so)
+#target_link_libraries(CUDA_Test_Clion /opt/vectorAdd/lib/libcudart.so)

@@ -6,7 +6,7 @@
 #include <device_launch_parameters.h>
 #include <cuda_runtime.h>
 
-#include "cuda.cuh"
+#include "vectorAdd.cuh"
 
 __global__
 void cudaVectorAdd(const float *a, const float *b, float *c, int numElements) {
@@ -32,7 +32,7 @@ void getTime(uint64_t &startTime) {
     startTime = timeStopped;
 }
 
-int cuda() {
+int vectorAdd() {
     uint64_t timeRecorded = getTimerNow();
 
     cudaDeviceProp property{};
