@@ -1,0 +1,7 @@
+#ifndef CUDA_TEST_CLION_CUDA_CUH
+#define CUDA_TEST_CLION_CUDA_CUH
+
+int cuda();
+
+
+#endif //CUDA_TEST_CLION_CUDA_CUH

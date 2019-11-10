@@ -1,8 +1,8 @@
 #include <cstdio>
-#include "cudaMain.h"
+#include "cuda.cuh"
 
 int main() {
     printf("Hello, World! From C++.\n\n");
-    cudaMain();
+    cuda();
     return 0;
 }

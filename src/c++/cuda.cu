@@ -1,9 +1,12 @@
-#include <cuda_runtime.h>
 #include <cmath>
 #include <chrono>
+#include <cstdio>
 #include <ctime>
+
 #include <device_launch_parameters.h>
-#include "cudaMain.h"
+#include <cuda_runtime.h>
+
+#include "cuda.cuh"
 
 __global__
 void cudaVectorAdd(const float *a, const float *b, float *c, int numElements) {
@@ -13,12 +16,6 @@ void cudaVectorAdd(const float *a, const float *b, float *c, int numElements) {
         c[i] = a[i] + b[i];
     }
 }
-
-//void vectorAdd(const float *a, const float *b, float *c, int numElements) {
-//    for (int index = 0; index < numElements; index++) {
-//        c[index] = a[index] + b[index];
-//    }
-//}
 
 uint64_t getTimerNow() {
     using namespace std::chrono;
@@ -35,7 +32,7 @@ void getTime(uint64_t &startTime) {
     startTime = timeStopped;
 }
 
-int cudaMain() {
+int cuda() {
     uint64_t timeRecorded = getTimerNow();
 
     cudaDeviceProp property{};
@@ -191,7 +188,6 @@ int cudaMain() {
 
     getTime(timeRecorded);
     printf("Add vectors using the CPU.\n");
-//    vectorAdd(hA, hB, hC, numElements);
     for (int index = 0; index < numElements; index++) {
         hC2[index] = hA[index] + hB[index];
     }
