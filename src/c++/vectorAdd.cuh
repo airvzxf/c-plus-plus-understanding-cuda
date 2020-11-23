@@ -3,5 +3,4 @@
 
 int vectorAdd();
 
-
 #endif //CUDA_TEST_CLION_VECTOR_ADD_CUH
